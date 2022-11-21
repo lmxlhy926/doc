@@ -25,3 +25,25 @@ usbipd wsl detach --busid 4-3
 sudo chmod a+rw /dev/ttyUSB0
 ```
 
+
+
+### 串口查询
+
+```bash
+#向串口发送数据
+echo yaoxu > ttyUSB0
+
+#查看串口输出
+cat ttyUSB0
+
+#查看串口
+ls -l /dev/ttyS*
+
+#查看串口驱动
+cat /proc/tty/driver/serial
+
+#查看串口设备
+dmesg | grep ttyS*
+
+```
+
